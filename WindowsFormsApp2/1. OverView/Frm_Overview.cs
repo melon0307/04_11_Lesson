@@ -81,7 +81,7 @@ namespace WindowsFormsApp2._1._OverView
             adapter.Fill(ds);             //Auto Connected DB: conn.Open(); => SqlCommand("select....") => SqlDataReader => while(DataReader.Read()).....conn.Close();     
 
             //Step4 
-            this.dataGridView1.DataSource = ds.Tables[0];     //ds有許多的Table，輸出第一個Table到控制項上
+            this.dataGridView1.DataSource = ds.Tables[0];     //有可能fill許多table，輸出索引0(第1個table)到控制項上
         }
 
         private void button1_Click(object sender, EventArgs e)
