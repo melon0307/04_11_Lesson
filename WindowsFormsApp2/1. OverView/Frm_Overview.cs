@@ -16,7 +16,7 @@ namespace WindowsFormsApp2._1._OverView
         public Frm_Overview()
         {
             InitializeComponent();
-            tabControl1.SelectedIndex = 1;
+            tabControl1.SelectedIndex = 2; //載入Form 預設的tabpage            
         }
 
         private void btnConnected_Click(object sender, EventArgs e)
@@ -113,6 +113,78 @@ namespace WindowsFormsApp2._1._OverView
             this.categoriesTableAdapter1.Fill(this.nwDataSet1.Categories);
             this.dataGridView2.DataSource = this.nwDataSet1.Categories; 
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.customersTableAdapter1.Fill(this.nwDataSet1.Customers);
+            this.dataGridView2.DataSource = this.nwDataSet1.Customers;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter1.FillByUnitPriceMoreThan(this.nwDataSet1.Products, 30);
+            this.dataGridView2.DataSource = this.nwDataSet1.Products;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter1.InsertProduct("x", false);
+            MessageBox.Show("輸入完成");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter1.Update(this.nwDataSet1.Products);
+            MessageBox.Show("Products資料已做修改");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.categoriesTableAdapter1.Fill(this.nwDataSet1.Categories);
+            this.bindingSource1.DataSource = this.nwDataSet1.Categories;
+            this.dataGridView3.DataSource = this.bindingSource1;
+            //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
+            this.textBox1.DataBindings.Add("Text", this.bindingSource1, "CategoryName");
+            // textbox與bindingSourse繫結  (控制項中的哪個屬性，來源，CategoryRow中的哪個屬性(欄位))
+            this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "Picture", true);
+            //pictureBox與bindingSourse繫結   (控制項中的哪個屬性，來源，CategoryRow中的哪個屬性(欄位)，是否把byte[]型態轉換成圖片)
+            this.bindingNavigator1.BindingSource = this.bindingSource1;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.Position = 0;
+            //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.Position -= 1;
+            //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.Position += 1;
+            //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.Position = this.bindingSource1.Count - 1;
+            //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)    //此事件為當bindingSourse.Position改變時觸發
+        {
+            this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            FrmNoCode f = new FrmNoCode();
+            f.Show();
         }
     }
 }

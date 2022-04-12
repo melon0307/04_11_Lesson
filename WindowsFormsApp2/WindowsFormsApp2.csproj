@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1. OverView\FrmNoCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. OverView\FrmNoCode.Designer.cs">
+      <DependentUpon>FrmNoCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="1. OverView\Frm_Overview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="1. OverView\FrmNoCode.resx">
+      <DependentUpon>FrmNoCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="1. OverView\Frm_Overview.resx">
       <DependentUpon>Frm_Overview.cs</DependentUpon>
     </EmbeddedResource>
