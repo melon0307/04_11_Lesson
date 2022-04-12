@@ -150,6 +150,7 @@ namespace WindowsFormsApp2._1._OverView
             this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "Picture", true);
             //pictureBox與bindingSourse繫結   (控制項中的哪個屬性，來源，CategoryRow中的哪個屬性(欄位)，是否把byte[]型態轉換成圖片)
             this.bindingNavigator1.BindingSource = this.bindingSource1;
+
         }
 
         private void button9_Click(object sender, EventArgs e)
