@@ -31,5 +31,32 @@ namespace WindowsFormsApp2._1._OverView
             this.categoriesTableAdapter.Fill(this.nWDataSet.Categories);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = this.openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                MessageBox.Show("OK " + this.openFileDialog1.FileName);
+
+                this.picturePictureBox.Image = Image.FromFile(this.openFileDialog1.FileName);
+            }
+            else 
+            {
+                MessageBox.Show("Cancel");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {            
+            if (this.colorDialog1.ShowDialog() == DialogResult.OK) // 試著把result變數拿掉，直接用showDialog()帶入
+            {
+                this.BackColor = this.colorDialog1.Color;
+            }
+            else 
+            {
+                MessageBox.Show("Cancel");
+            }
+        }
     }
 }

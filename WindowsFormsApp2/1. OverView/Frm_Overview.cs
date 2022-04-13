@@ -16,7 +16,7 @@ namespace WindowsFormsApp2._1._OverView
         public Frm_Overview()
         {
             InitializeComponent();
-            tabControl1.SelectedIndex = 2; //載入Form 預設的tabpage            
+            tabControl1.SelectedIndex = tabControl1.TabCount-1; //載入Form 預設的tabpage            
         }
 
         private void btnConnected_Click(object sender, EventArgs e)
@@ -186,6 +186,79 @@ namespace WindowsFormsApp2._1._OverView
         {
             FrmNoCode f = new FrmNoCode();
             f.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter1.Fill(this.nwDataSet1.Products);
+            this.categoriesTableAdapter1.Fill(this.nwDataSet1.Categories);
+            this.customersTableAdapter1.Fill(this.nwDataSet1.Customers);
+
+            this.dataGridView4.DataSource = this.nwDataSet1.Products;
+            this.dataGridView5.DataSource = this.nwDataSet1.Categories;
+            this.dataGridView6.DataSource = this.nwDataSet1.Customers;
+
+            this.listBox2.Items.Clear();
+            for(int i =0; i < this.nwDataSet1.Tables.Count; i++)
+            {
+                DataTable dataTable = this.nwDataSet1.Tables[i];
+                this.listBox2.Items.Add(dataTable.TableName);
+                string s = "";
+                string st = "";
+                // Column schema
+                for(int column = 0; column < dataTable.Columns.Count; column++)
+                {                    
+                    s += dataTable.Columns[column]+"  ";                    
+                }
+                listBox2.Items.Add(s);
+
+                // Row - Data
+                for (int row = 0; row < dataTable.Rows.Count; row++)
+                {
+                    for(int j = 0 ; j<dataTable.Columns.Count; j++)
+                    {                         
+                         st += dataTable.Rows[row][j]+" ";                        
+                                                                 // ↑ 第row筆的第j個欄位
+                    }
+                    this.listBox2.Items.Add(st);
+                    st = "";
+                }               
+
+                listBox2.Items.Add("=====================================");
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.nwDataSet1.Products.Rows[0]["ProductName"].ToString());
+            MessageBox.Show(this.nwDataSet1.Products.Rows[0][1].ToString());
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            this.nwDataSet1.Products.WriteXml("Product.xml", XmlWriteMode.WriteSchema);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            nwDataSet1.Products.Clear();
+            this.nwDataSet1.Products.ReadXml("Product.xml");
+            this.dataGridView4.DataSource = this.nwDataSet1.Products;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            /*
+             if (this.splitContainer2.Panel1Collapsed == true)
+            {
+                this.splitContainer2.Panel1Collapsed = false;
+            }
+            else
+            {
+                this.splitContainer2.Panel1Collapsed = true;
+            }
+            */
+            this.splitContainer2.Panel1Collapsed = !this.splitContainer2.Panel1Collapsed;
         }
     }
 }

@@ -30,27 +30,27 @@ namespace WindowsFormsApp2._1._OverView
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNoCode));
             System.Windows.Forms.Label categoryIDLabel;
             System.Windows.Forms.Label categoryNameLabel;
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label pictureLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNoCode));
             this.nWDataSet = new WindowsFormsApp2.NWDataSet();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesTableAdapter = new WindowsFormsApp2.NWDataSetTableAdapters.CategoriesTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp2.NWDataSetTableAdapters.TableAdapterManager();
             this.categoriesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.categoriesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.categoriesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +61,10 @@ namespace WindowsFormsApp2._1._OverView
             this.categoryNameTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.picturePictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button2 = new System.Windows.Forms.Button();
             categoryIDLabel = new System.Windows.Forms.Label();
             categoryNameLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
@@ -72,6 +76,46 @@ namespace WindowsFormsApp2._1._OverView
             ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
             this.SuspendLayout();
+            // 
+            // categoryIDLabel
+            // 
+            categoryIDLabel.AutoSize = true;
+            categoryIDLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            categoryIDLabel.Location = new System.Drawing.Point(555, 91);
+            categoryIDLabel.Name = "categoryIDLabel";
+            categoryIDLabel.Size = new System.Drawing.Size(81, 15);
+            categoryIDLabel.TabIndex = 2;
+            categoryIDLabel.Text = "Category ID:";
+            // 
+            // categoryNameLabel
+            // 
+            categoryNameLabel.AutoSize = true;
+            categoryNameLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            categoryNameLabel.Location = new System.Drawing.Point(538, 131);
+            categoryNameLabel.Name = "categoryNameLabel";
+            categoryNameLabel.Size = new System.Drawing.Size(99, 15);
+            categoryNameLabel.TabIndex = 4;
+            categoryNameLabel.Text = "Category Name:";
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            descriptionLabel.Location = new System.Drawing.Point(561, 171);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(76, 15);
+            descriptionLabel.TabIndex = 6;
+            descriptionLabel.Text = "Description:";
+            // 
+            // pictureLabel
+            // 
+            pictureLabel.AutoSize = true;
+            pictureLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            pictureLabel.Location = new System.Drawing.Point(585, 218);
+            pictureLabel.Name = "pictureLabel";
+            pictureLabel.Size = new System.Drawing.Size(51, 15);
+            pictureLabel.TabIndex = 8;
+            pictureLabel.Text = "Picture:";
             // 
             // nWDataSet
             // 
@@ -126,6 +170,31 @@ namespace WindowsFormsApp2._1._OverView
             this.categoriesBindingNavigator.TabIndex = 0;
             this.categoriesBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "加入新的";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 22);
+            this.bindingNavigatorCountItem.Text = "/{0}";
+            this.bindingNavigatorCountItem.ToolTipText = "項目總數";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "刪除";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -159,16 +228,9 @@ namespace WindowsFormsApp2._1._OverView
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 22);
-            this.bindingNavigatorCountItem.Text = "/{0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目總數";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -191,26 +253,8 @@ namespace WindowsFormsApp2._1._OverView
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "加入新的";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "刪除";
             // 
             // categoriesBindingNavigatorSaveItem
             // 
@@ -262,16 +306,6 @@ namespace WindowsFormsApp2._1._OverView
             this.dataGridViewImageColumn1.HeaderText = "Picture";
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
-            // categoryIDLabel
-            // 
-            categoryIDLabel.AutoSize = true;
-            categoryIDLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            categoryIDLabel.Location = new System.Drawing.Point(555, 91);
-            categoryIDLabel.Name = "categoryIDLabel";
-            categoryIDLabel.Size = new System.Drawing.Size(81, 15);
-            categoryIDLabel.TabIndex = 2;
-            categoryIDLabel.Text = "Category ID:";
-            // 
             // categoryIDTextBox
             // 
             this.categoryIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriesBindingSource, "CategoryID", true));
@@ -280,16 +314,6 @@ namespace WindowsFormsApp2._1._OverView
             this.categoryIDTextBox.Name = "categoryIDTextBox";
             this.categoryIDTextBox.Size = new System.Drawing.Size(248, 25);
             this.categoryIDTextBox.TabIndex = 3;
-            // 
-            // categoryNameLabel
-            // 
-            categoryNameLabel.AutoSize = true;
-            categoryNameLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            categoryNameLabel.Location = new System.Drawing.Point(538, 131);
-            categoryNameLabel.Name = "categoryNameLabel";
-            categoryNameLabel.Size = new System.Drawing.Size(99, 15);
-            categoryNameLabel.TabIndex = 4;
-            categoryNameLabel.Text = "Category Name:";
             // 
             // categoryNameTextBox
             // 
@@ -300,16 +324,6 @@ namespace WindowsFormsApp2._1._OverView
             this.categoryNameTextBox.Size = new System.Drawing.Size(248, 25);
             this.categoryNameTextBox.TabIndex = 5;
             // 
-            // descriptionLabel
-            // 
-            descriptionLabel.AutoSize = true;
-            descriptionLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            descriptionLabel.Location = new System.Drawing.Point(561, 171);
-            descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(76, 15);
-            descriptionLabel.TabIndex = 6;
-            descriptionLabel.Text = "Description:";
-            // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriesBindingSource, "Description", true));
@@ -319,18 +333,9 @@ namespace WindowsFormsApp2._1._OverView
             this.descriptionTextBox.Size = new System.Drawing.Size(248, 25);
             this.descriptionTextBox.TabIndex = 7;
             // 
-            // pictureLabel
-            // 
-            pictureLabel.AutoSize = true;
-            pictureLabel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            pictureLabel.Location = new System.Drawing.Point(585, 218);
-            pictureLabel.Name = "pictureLabel";
-            pictureLabel.Size = new System.Drawing.Size(51, 15);
-            pictureLabel.TabIndex = 8;
-            pictureLabel.Text = "Picture:";
-            // 
             // picturePictureBox
             // 
+            this.picturePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.categoriesBindingSource, "Picture", true));
             this.picturePictureBox.Location = new System.Drawing.Point(643, 218);
             this.picturePictureBox.Name = "picturePictureBox";
@@ -339,11 +344,39 @@ namespace WindowsFormsApp2._1._OverView
             this.picturePictureBox.TabIndex = 9;
             this.picturePictureBox.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(643, 452);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 28);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Browse ...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button2.Location = new System.Drawing.Point(781, 452);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 28);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Color ...";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmNoCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 586);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(categoryIDLabel);
             this.Controls.Add(this.categoryIDTextBox);
             this.Controls.Add(categoryNameLabel);
@@ -397,5 +430,9 @@ namespace WindowsFormsApp2._1._OverView
         private System.Windows.Forms.TextBox categoryNameTextBox;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.PictureBox picturePictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button button2;
     }
 }
