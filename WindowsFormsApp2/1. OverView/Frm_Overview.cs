@@ -156,24 +156,28 @@ namespace WindowsFormsApp2._1._OverView
         private void button9_Click(object sender, EventArgs e)
         {
             this.bindingSource1.Position = 0;
+            //this.bindingSource1.MoveFirst();
             //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             this.bindingSource1.Position -= 1;
+            //this.bindingSource1.MovePrevious();
             //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             this.bindingSource1.Position += 1;
+            //this.bindingSource1.MoveNext();
             //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             this.bindingSource1.Position = this.bindingSource1.Count - 1;
+            //this.bindingSource1.MoveLast();
             //this.label2.Text = $"{this.bindingSource1.Position + 1} / {this.bindingSource1.Count}";
         }
 
@@ -230,8 +234,12 @@ namespace WindowsFormsApp2._1._OverView
 
         private void button16_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.nwDataSet1.Products.Rows[0]["ProductName"].ToString());
+            // Weak Type
+            MessageBox.Show(this.nwDataSet1.Products.Rows[0]["ProductName"].ToString()); // Weak Type 假如"ProductName"打錯，編譯會過但exe會出錯
             MessageBox.Show(this.nwDataSet1.Products.Rows[0][1].ToString());
+
+            // Strong Type
+            MessageBox.Show(this.nwDataSet1.Products[0].ProductName); //Strong Type 將欄位階變為屬性，因此ProductName若打錯，編譯階段就會出錯 
         }
 
         private void button17_Click(object sender, EventArgs e)
