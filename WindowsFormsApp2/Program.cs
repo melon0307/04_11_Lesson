@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Starter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace WindowsFormsApp2
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Overview());
+            Application.Run(new FrmSqlConnection());
         }
     }
 }
