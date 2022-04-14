@@ -45,6 +45,8 @@
             this.button23 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -63,9 +65,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.productsTableAdapter1 = new WindowsFormsApp2.NWDataSetTableAdapters.ProductsTableAdapter();
+            this.nwDataSet1 = new WindowsFormsApp2.NWDataSet();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -74,6 +80,8 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage3
@@ -88,10 +96,10 @@
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.listBox3);
             this.tabPage3.Controls.Add(this.button9);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1415, 816);
+            this.tabPage3.Size = new System.Drawing.Size(1477, 814);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Connection Pooling 集區";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -204,10 +212,10 @@
             this.tabPage4.Controls.Add(this.button27);
             this.tabPage4.Controls.Add(this.comboBox2);
             this.tabPage4.Controls.Add(this.button23);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1415, 816);
+            this.tabPage4.Size = new System.Drawing.Size(1477, 814);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "sql Exception";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -258,6 +266,7 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.button13);
             this.tabPage1.Controls.Add(this.button12);
             this.tabPage1.Controls.Add(this.button7);
@@ -279,6 +288,28 @@
             this.tabPage1.Text = "connectionStsring";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(457, 39);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(304, 65);
+            this.button13.TabIndex = 57;
+            this.button13.Text = "this.tabpage.BackColor ...";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(38, 232);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(147, 65);
+            this.button12.TabIndex = 56;
+            this.button12.Text = "證實using syntax sugar 自動Close()";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(822, 339);
@@ -288,6 +319,7 @@
             this.button7.TabIndex = 55;
             this.button7.Text = "SQL Server  Local DB 資料庫檔案 - 相對路徑  - sqlConnectionStringBuilder";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -298,6 +330,7 @@
             this.button6.TabIndex = 54;
             this.button6.Text = "SQL Server  Local DB 資料庫檔案 - 相對路徑  - |DataDirectory|";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -308,6 +341,7 @@
             this.button5.TabIndex = 53;
             this.button5.Text = "SQL Server  Local DB 資料庫檔案 - 絕對路徑 ";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button59
             // 
@@ -328,6 +362,7 @@
             this.button58.TabIndex = 51;
             this.button58.Text = "加密 組態檔連接字串";
             this.button58.UseVisualStyleBackColor = true;
+            this.button58.Click += new System.EventHandler(this.button58_Click);
             // 
             // listBox1
             // 
@@ -386,15 +421,16 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.statusStrip1);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabPage2.ForeColor = System.Drawing.Color.Red;
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1415, 816);
+            this.tabPage2.Size = new System.Drawing.Size(1477, 814);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "StateChange Event";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -434,6 +470,7 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "2. 0 XXXTableAdapter";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dataGridView1
             // 
@@ -478,28 +515,47 @@
             this.button11.TabIndex = 0;
             this.button11.Text = "button11";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button12
+            // panel1
             // 
-            this.button12.Location = new System.Drawing.Point(38, 232);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(147, 65);
-            this.button12.TabIndex = 56;
-            this.button12.Text = "證實using syntax sugar 自動Close()";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(72, 334);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(288, 154);
+            this.panel1.TabIndex = 58;
             // 
-            // button13
+            // statusStrip1
             // 
-            this.button13.Location = new System.Drawing.Point(457, 39);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(304, 65);
-            this.button13.TabIndex = 57;
-            this.button13.Text = "this.tabpage.BackColor ...";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(4, 787);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1469, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(128, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(128, 17);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            // 
+            // productsTableAdapter1
+            // 
+            this.productsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // nwDataSet1
+            // 
+            this.nwDataSet1.DataSetName = "NWDataSet";
+            this.nwDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // FrmSqlConnection
             // 
@@ -517,9 +573,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nwDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +623,11 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private WindowsFormsApp2.NWDataSetTableAdapters.ProductsTableAdapter productsTableAdapter1;
+        private WindowsFormsApp2.NWDataSet nwDataSet1;
     }
 }
