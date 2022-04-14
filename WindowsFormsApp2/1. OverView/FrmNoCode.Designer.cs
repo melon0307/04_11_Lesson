@@ -65,6 +65,7 @@ namespace WindowsFormsApp2._1._OverView
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button2 = new System.Windows.Forms.Button();
+            this.productsTableAdapter1 = new WindowsFormsApp2.NWDataSetTableAdapters.ProductsTableAdapter();
             categoryIDLabel = new System.Windows.Forms.Label();
             categoryNameLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
@@ -222,7 +223,6 @@ namespace WindowsFormsApp2._1._OverView
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -370,6 +370,10 @@ namespace WindowsFormsApp2._1._OverView
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // productsTableAdapter1
+            // 
+            this.productsTableAdapter1.ClearBeforeFill = true;
+            // 
             // FrmNoCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -434,5 +438,6 @@ namespace WindowsFormsApp2._1._OverView
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button2;
+        private NWDataSetTableAdapters.ProductsTableAdapter productsTableAdapter1;
     }
 }

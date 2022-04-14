@@ -27,6 +27,8 @@ namespace WindowsFormsApp2._1._OverView
 
         private void FrmNoCode_Load(object sender, EventArgs e)
         {
+            // TODO: 這行程式碼會將資料載入 'nWDataSet.Products' 資料表。您可以視需要進行移動或移除。
+            this.productsTableAdapter1.Fill(this.nWDataSet.Products);
             // TODO: 這行程式碼會將資料載入 'nWDataSet.Categories' 資料表。您可以視需要進行移動或移除。
             this.categoriesTableAdapter.Fill(this.nWDataSet.Categories);
 
