@@ -21,7 +21,7 @@ namespace Starter
         {
             InitializeComponent();
             this.tabPage1.BackColor = Settings.Default.MyBackColor;
-            this.tabControl1.SelectedIndex = 1;
+            this.tabControl1.SelectedIndex = 2;
 
             //========================================
             
@@ -313,7 +313,7 @@ namespace Starter
         private void button6_Click(object sender, EventArgs e)
         {
             string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
-            //"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True"
+                                                   //"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True"
             // Step1: SqlConnection
             // Step2: SqlCommand
             // Step3: SqlDataReader
@@ -457,6 +457,43 @@ namespace Starter
 
             this.productsTableAdapter1.Fill(this.nwDataSet1.Products);
             this.dataGridView1.DataSource = this.nwDataSet1.Products;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            SqlConnection[] conns = new SqlConnection[100];
+            for(int i = 0; i < conns.Length; i++)
+            {
+                conns[i] = new SqlConnection(Settings.Default.NorthwindConnectionString);
+                conns[i].Open();
+                //預設一次最多開100個Open
+                label3.Text = $"{i + 1}";
+                Application.DoEvents();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            const int MAXPoolSize = 200;
+
+            SqlConnection[] conns = new SqlConnection[MAXPoolSize];
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(Settings.Default.AdventureWorksConnectionString);
+            builder.MaxPoolSize = MAXPoolSize;
+            builder.ConnectTimeout = 1;  //  逾時設定1 (s);
+
+            for (int i = 0; i < conns.Length; i++)
+            {
+                conns[i] = new SqlConnection(builder.ConnectionString);
+                conns[i].Open();
+                // 設定一次最多開200個Open
+                label3.Text = $"{i + 1}";
+                Application.DoEvents();
+            }
         }
     }
 }

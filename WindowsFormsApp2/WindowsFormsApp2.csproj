@@ -86,6 +86,12 @@
     <Compile Include="3. Connected 連線環境\FrmConnected.designer.cs">
       <DependentUpon>FrmConnected.cs</DependentUpon>
     </Compile>
+    <Compile Include="3. Connected 連線環境\FrmImageFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3. Connected 連線環境\FrmImageFlags.designer.cs">
+      <DependentUpon>FrmImageFlags.cs</DependentUpon>
+    </Compile>
     <Compile Include="4. Disconnected 離線 DataSet\FrmDisConnected_離線DataSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="3. Connected 連線環境\FrmConnected.resx">
       <DependentUpon>FrmConnected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Connected 連線環境\FrmImageFlags.resx">
+      <DependentUpon>FrmImageFlags.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="4. Disconnected 離線 DataSet\FrmDisConnected_離線DataSet.resx">
       <DependentUpon>FrmDisConnected_離線DataSet.cs</DependentUpon>

@@ -28,7 +28,7 @@ namespace WindowsFormsApp2
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNoCode());
+            Application.Run(new FrmConnected());
         }
     }
 }
