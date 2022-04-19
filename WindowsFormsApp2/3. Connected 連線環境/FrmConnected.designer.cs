@@ -29,62 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup37 = new System.Windows.Forms.ListViewGroup("xxxxxxxx", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup38 = new System.Windows.Forms.ListViewGroup("yyyyyy", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem55 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("xxxxxxxx", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("yyyyyy", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "aaa",
             "a1",
             "a2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem56 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "bbb",
             "b1",
             "b2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem57 = new System.Windows.Forms.ListViewItem("ccc");
-            System.Windows.Forms.ListViewGroup listViewGroup39 = new System.Windows.Forms.ListViewGroup("USA (2)", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup40 = new System.Windows.Forms.ListViewGroup("UK (1)", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem58 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("ccc");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node8");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node9");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node4", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node10");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node5", new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node11");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node12");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node13");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node6", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node14");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
+            treeNode10});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode5,
+            treeNode9,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node1");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Node3");
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("USA (2)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("UK (1)", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "memA",
             "aaa",
             "bbb"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem59 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "memB",
             "aaa",
             "bbb"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem60 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "memC",
             "aaa",
             "bbb"}, -1);
-            System.Windows.Forms.TreeNode treeNode136 = new System.Windows.Forms.TreeNode("Node8");
-            System.Windows.Forms.TreeNode treeNode137 = new System.Windows.Forms.TreeNode("Node9");
-            System.Windows.Forms.TreeNode treeNode138 = new System.Windows.Forms.TreeNode("Node4", new System.Windows.Forms.TreeNode[] {
-            treeNode136,
-            treeNode137});
-            System.Windows.Forms.TreeNode treeNode139 = new System.Windows.Forms.TreeNode("Node10");
-            System.Windows.Forms.TreeNode treeNode140 = new System.Windows.Forms.TreeNode("Node5", new System.Windows.Forms.TreeNode[] {
-            treeNode139});
-            System.Windows.Forms.TreeNode treeNode141 = new System.Windows.Forms.TreeNode("Node11");
-            System.Windows.Forms.TreeNode treeNode142 = new System.Windows.Forms.TreeNode("Node12");
-            System.Windows.Forms.TreeNode treeNode143 = new System.Windows.Forms.TreeNode("Node13");
-            System.Windows.Forms.TreeNode treeNode144 = new System.Windows.Forms.TreeNode("Node6", new System.Windows.Forms.TreeNode[] {
-            treeNode141,
-            treeNode142,
-            treeNode143});
-            System.Windows.Forms.TreeNode treeNode145 = new System.Windows.Forms.TreeNode("Node14");
-            System.Windows.Forms.TreeNode treeNode146 = new System.Windows.Forms.TreeNode("Node7", new System.Windows.Forms.TreeNode[] {
-            treeNode145});
-            System.Windows.Forms.TreeNode treeNode147 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
-            treeNode138,
-            treeNode140,
-            treeNode144,
-            treeNode146});
-            System.Windows.Forms.TreeNode treeNode148 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode149 = new System.Windows.Forms.TreeNode("Node2");
-            System.Windows.Forms.TreeNode treeNode150 = new System.Windows.Forms.TreeNode("Node3");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConnected));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -160,22 +161,24 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button22 = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.button22 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.largeIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smallIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailsViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.myMemberTableAdapter1 = new WindowsFormsApp2.NWDataSetTableAdapters.MyMemberTableAdapter();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox4.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -201,10 +204,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -242,20 +245,33 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.flowLayoutPanel1);
             this.tabPage6.Controls.Add(this.button25);
             this.tabPage6.Controls.Add(this.button24);
             this.tabPage6.Controls.Add(this.textBox4);
             this.tabPage6.Controls.Add(this.pictureBox1);
             this.tabPage6.Controls.Add(this.label5);
             this.tabPage6.Controls.Add(this.label4);
-            this.tabPage6.Location = new System.Drawing.Point(4, 28);
+            this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage6.Size = new System.Drawing.Size(1202, 623);
+            this.tabPage6.Size = new System.Drawing.Size(1201, 621);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Insert Image";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(564, 47);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(587, 378);
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // button25
             // 
@@ -266,6 +282,7 @@
             this.button25.TabIndex = 5;
             this.button25.Text = "Insert to DB";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button24
             // 
@@ -276,6 +293,7 @@
             this.button24.TabIndex = 4;
             this.button24.Text = "Browse...";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // textBox4
             // 
@@ -347,6 +365,7 @@
             this.button8.TabIndex = 12;
             this.button8.Text = "Add Member";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button23
             // 
@@ -357,6 +376,7 @@
             this.button23.TabIndex = 0;
             this.button23.Text = "DDL - Create Image Table";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // tabPage5
             // 
@@ -426,10 +446,10 @@
             this.tabPage7.Controls.Add(this.pictureBox2);
             this.tabPage7.Controls.Add(this.button26);
             this.tabPage7.Controls.Add(this.listBox3);
-            this.tabPage7.Location = new System.Drawing.Point(4, 28);
+            this.tabPage7.Location = new System.Drawing.Point(4, 26);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1202, 623);
+            this.tabPage7.Size = new System.Drawing.Size(1201, 621);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Load Data";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -443,6 +463,7 @@
             this.button27.TabIndex = 5;
             this.button27.Text = "Load Data";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // listBox5
             // 
@@ -453,6 +474,7 @@
             this.listBox5.Name = "listBox5";
             this.listBox5.Size = new System.Drawing.Size(637, 225);
             this.listBox5.TabIndex = 4;
+            this.listBox5.SelectedIndexChanged += new System.EventHandler(this.listBox5_SelectedIndexChanged);
             // 
             // listBox4
             // 
@@ -467,6 +489,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::WindowsFormsApp2.Properties.Resources.salmon;
             this.pictureBox2.Location = new System.Drawing.Point(336, 60);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
@@ -484,6 +507,7 @@
             this.button26.TabIndex = 1;
             this.button26.Text = "Load Data";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // listBox3
             // 
@@ -494,6 +518,7 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(229, 225);
             this.listBox3.TabIndex = 0;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // tabPage4
             // 
@@ -550,6 +575,7 @@
             this.button16.TabIndex = 1;
             this.button16.Text = "ExecuteScalar - return 一個結果值";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button19
             // 
@@ -628,6 +654,7 @@
             this.button18.TabIndex = 9;
             this.button18.Text = "ExecuteReader - return 多個結果集";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // groupBox8
             // 
@@ -704,7 +731,7 @@
             this.listBox2.Location = new System.Drawing.Point(778, 85);
             this.listBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(175, 123);
+            this.listBox2.Size = new System.Drawing.Size(221, 123);
             this.listBox2.TabIndex = 3;
             // 
             // button20
@@ -817,10 +844,10 @@
             this.tabPage8.Controls.Add(this.groupBox12);
             this.tabPage8.Controls.Add(this.button29);
             this.tabPage8.Controls.Add(this.button28);
-            this.tabPage8.Location = new System.Drawing.Point(4, 28);
+            this.tabPage8.Location = new System.Drawing.Point(4, 26);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1209, 649);
+            this.tabPage8.Size = new System.Drawing.Size(1209, 651);
             this.tabPage8.TabIndex = 4;
             this.tabPage8.Text = "Transaction";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -910,6 +937,7 @@
             this.button12.TabIndex = 6;
             this.button12.Text = "Add Member";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label3
             // 
@@ -1001,20 +1029,20 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            listViewGroup37.Header = "xxxxxxxx";
-            listViewGroup37.Name = "xxxxxxxx";
-            listViewGroup38.Header = "yyyyyy";
-            listViewGroup38.Name = "yyyyyyy";
+            listViewGroup1.Header = "xxxxxxxx";
+            listViewGroup1.Name = "xxxxxxxx";
+            listViewGroup2.Header = "yyyyyy";
+            listViewGroup2.Name = "yyyyyyy";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup37,
-            listViewGroup38});
+            listViewGroup1,
+            listViewGroup2});
             this.listView2.HideSelection = false;
-            listViewItem55.Group = listViewGroup37;
-            listViewItem57.Group = listViewGroup38;
+            listViewItem1.Group = listViewGroup1;
+            listViewItem3.Group = listViewGroup2;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem55,
-            listViewItem56,
-            listViewItem57});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.listView2.Location = new System.Drawing.Point(323, 17);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView2.Name = "listView2";
@@ -1080,6 +1108,98 @@
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(652, 225);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(112, 27);
+            this.button22.TabIndex = 6;
+            this.button22.Text = "tree View.Add";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(652, 17);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Node8";
+            treeNode1.Text = "Node8";
+            treeNode2.Name = "Node9";
+            treeNode2.Text = "Node9";
+            treeNode3.Name = "Node4";
+            treeNode3.Text = "Node4";
+            treeNode4.Name = "Node10";
+            treeNode4.Text = "Node10";
+            treeNode5.Name = "Node5";
+            treeNode5.Text = "Node5";
+            treeNode6.Name = "Node11";
+            treeNode6.Text = "Node11";
+            treeNode7.Name = "Node12";
+            treeNode7.Text = "Node12";
+            treeNode8.Name = "Node13";
+            treeNode8.Text = "Node13";
+            treeNode9.Name = "Node6";
+            treeNode9.Text = "Node6";
+            treeNode10.Name = "Node14";
+            treeNode10.Text = "Node14";
+            treeNode11.Name = "Node7";
+            treeNode11.Text = "Node7";
+            treeNode12.Name = "Node0";
+            treeNode12.Text = "Node0";
+            treeNode13.Name = "Node1";
+            treeNode13.Text = "Node1";
+            treeNode14.Name = "Node2";
+            treeNode14.Text = "Node2";
+            treeNode15.Name = "Node3";
+            treeNode15.Text = "Node3";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15});
+            this.treeView1.Size = new System.Drawing.Size(144, 202);
+            this.treeView1.TabIndex = 5;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            listViewGroup3.Header = "USA (2)";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "UK (1)";
+            listViewGroup4.Name = "listViewGroup2";
+            this.listView3.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup3,
+            listViewGroup4});
+            this.listView3.HideSelection = false;
+            listViewItem4.Group = listViewGroup3;
+            listViewItem5.Group = listViewGroup3;
+            listViewItem6.Group = listViewGroup4;
+            this.listView3.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
+            this.listView3.Location = new System.Drawing.Point(484, 17);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(134, 203);
+            this.listView3.TabIndex = 4;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "欄位一";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "欄位二";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "欄位三";
+            // 
             // listView1
             // 
             this.listView1.ContextMenuStrip = this.contextMenuStrip1;
@@ -1093,6 +1213,84 @@
             this.listView1.SmallImageList = this.ImageList1;
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.largeIconToolStripMenuItem,
+            this.smallIconToolStripMenuItem,
+            this.detailsViewToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(143, 70);
+            // 
+            // largeIconToolStripMenuItem
+            // 
+            this.largeIconToolStripMenuItem.Name = "largeIconToolStripMenuItem";
+            this.largeIconToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.largeIconToolStripMenuItem.Text = "Large Icon";
+            this.largeIconToolStripMenuItem.Click += new System.EventHandler(this.largeIconToolStripMenuItem_Click);
+            // 
+            // smallIconToolStripMenuItem
+            // 
+            this.smallIconToolStripMenuItem.Name = "smallIconToolStripMenuItem";
+            this.smallIconToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.smallIconToolStripMenuItem.Text = "Small Icon";
+            this.smallIconToolStripMenuItem.Click += new System.EventHandler(this.smallIconToolStripMenuItem_Click);
+            // 
+            // detailsViewToolStripMenuItem
+            // 
+            this.detailsViewToolStripMenuItem.Name = "detailsViewToolStripMenuItem";
+            this.detailsViewToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.detailsViewToolStripMenuItem.Text = "Details View";
+            this.detailsViewToolStripMenuItem.Click += new System.EventHandler(this.detailsViewToolStripMenuItem_Click);
+            // 
+            // ImageList2
+            // 
+            this.ImageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList2.ImageStream")));
+            this.ImageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList2.Images.SetKeyName(0, "FLGGERM.ICO");
+            this.ImageList2.Images.SetKeyName(1, "CTRCAN.ICO");
+            this.ImageList2.Images.SetKeyName(2, "CTRFRAN.ICO");
+            this.ImageList2.Images.SetKeyName(3, "CTRGERM.ICO");
+            this.ImageList2.Images.SetKeyName(4, "CTRITALY.ICO");
+            this.ImageList2.Images.SetKeyName(5, "CTRJAPAN.ICO");
+            this.ImageList2.Images.SetKeyName(6, "CTRMEX.ICO");
+            this.ImageList2.Images.SetKeyName(7, "CTRSKOR.ICO");
+            this.ImageList2.Images.SetKeyName(8, "CTRSPAIN.ICO");
+            this.ImageList2.Images.SetKeyName(9, "CTRUK.ICO");
+            this.ImageList2.Images.SetKeyName(10, "CTRUSA.ICO");
+            this.ImageList2.Images.SetKeyName(11, "FLGASTRL.ICO");
+            this.ImageList2.Images.SetKeyName(12, "FLGAUSTA.ICO");
+            this.ImageList2.Images.SetKeyName(13, "FLGBELG.ICO");
+            this.ImageList2.Images.SetKeyName(14, "FLGBRAZL.ICO");
+            this.ImageList2.Images.SetKeyName(15, "FLGCAN.ICO");
+            this.ImageList2.Images.SetKeyName(16, "FLGDEN.ICO");
+            this.ImageList2.Images.SetKeyName(17, "FLGFIN.ICO");
+            this.ImageList2.Images.SetKeyName(18, "FLGFRAN.ICO");
+            // 
+            // ImageList1
+            // 
+            this.ImageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList1.ImageStream")));
+            this.ImageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList1.Images.SetKeyName(0, "FLGGERM.ICO");
+            this.ImageList1.Images.SetKeyName(1, "CTRCAN.ICO");
+            this.ImageList1.Images.SetKeyName(2, "CTRFRAN.ICO");
+            this.ImageList1.Images.SetKeyName(3, "CTRGERM.ICO");
+            this.ImageList1.Images.SetKeyName(4, "CTRITALY.ICO");
+            this.ImageList1.Images.SetKeyName(5, "CTRJAPAN.ICO");
+            this.ImageList1.Images.SetKeyName(6, "CTRMEX.ICO");
+            this.ImageList1.Images.SetKeyName(7, "CTRSKOR.ICO");
+            this.ImageList1.Images.SetKeyName(8, "CTRSPAIN.ICO");
+            this.ImageList1.Images.SetKeyName(9, "CTRUK.ICO");
+            this.ImageList1.Images.SetKeyName(10, "CTRUSA.ICO");
+            this.ImageList1.Images.SetKeyName(11, "FLGASTRL.ICO");
+            this.ImageList1.Images.SetKeyName(12, "FLGAUSTA.ICO");
+            this.ImageList1.Images.SetKeyName(13, "FLGBELG.ICO");
+            this.ImageList1.Images.SetKeyName(14, "FLGBRAZL.ICO");
+            this.ImageList1.Images.SetKeyName(15, "FLGCAN.ICO");
+            this.ImageList1.Images.SetKeyName(16, "FLGDEN.ICO");
+            this.ImageList1.Images.SetKeyName(17, "FLGFIN.ICO");
+            this.ImageList1.Images.SetKeyName(18, "FLGFRAN.ICO");
             // 
             // tabPage1
             // 
@@ -1128,183 +1326,21 @@
             this.tabPage3.Controls.Add(this.listBox1);
             this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox8);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1209, 649);
+            this.tabPage3.Size = new System.Drawing.Size(1209, 651);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ExecuteXXX";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // listView3
+            // myMemberTableAdapter1
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            listViewGroup39.Header = "USA (2)";
-            listViewGroup39.Name = "listViewGroup1";
-            listViewGroup40.Header = "UK (1)";
-            listViewGroup40.Name = "listViewGroup2";
-            this.listView3.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup39,
-            listViewGroup40});
-            this.listView3.HideSelection = false;
-            listViewItem58.Group = listViewGroup39;
-            listViewItem59.Group = listViewGroup39;
-            listViewItem60.Group = listViewGroup40;
-            this.listView3.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem58,
-            listViewItem59,
-            listViewItem60});
-            this.listView3.Location = new System.Drawing.Point(484, 17);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(134, 203);
-            this.listView3.TabIndex = 4;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.myMemberTableAdapter1.ClearBeforeFill = true;
             // 
-            // columnHeader4
+            // openFileDialog1
             // 
-            this.columnHeader4.Text = "欄位一";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "欄位二";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "欄位三";
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(652, 17);
-            this.treeView1.Name = "treeView1";
-            treeNode136.Name = "Node8";
-            treeNode136.Text = "Node8";
-            treeNode137.Name = "Node9";
-            treeNode137.Text = "Node9";
-            treeNode138.Name = "Node4";
-            treeNode138.Text = "Node4";
-            treeNode139.Name = "Node10";
-            treeNode139.Text = "Node10";
-            treeNode140.Name = "Node5";
-            treeNode140.Text = "Node5";
-            treeNode141.Name = "Node11";
-            treeNode141.Text = "Node11";
-            treeNode142.Name = "Node12";
-            treeNode142.Text = "Node12";
-            treeNode143.Name = "Node13";
-            treeNode143.Text = "Node13";
-            treeNode144.Name = "Node6";
-            treeNode144.Text = "Node6";
-            treeNode145.Name = "Node14";
-            treeNode145.Text = "Node14";
-            treeNode146.Name = "Node7";
-            treeNode146.Text = "Node7";
-            treeNode147.Name = "Node0";
-            treeNode147.Text = "Node0";
-            treeNode148.Name = "Node1";
-            treeNode148.Text = "Node1";
-            treeNode149.Name = "Node2";
-            treeNode149.Text = "Node2";
-            treeNode150.Name = "Node3";
-            treeNode150.Text = "Node3";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode147,
-            treeNode148,
-            treeNode149,
-            treeNode150});
-            this.treeView1.Size = new System.Drawing.Size(144, 202);
-            this.treeView1.TabIndex = 5;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(652, 225);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(112, 27);
-            this.button22.TabIndex = 6;
-            this.button22.Text = "tree View.Add";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.largeIconToolStripMenuItem,
-            this.smallIconToolStripMenuItem,
-            this.detailsViewToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(143, 70);
-            // 
-            // largeIconToolStripMenuItem
-            // 
-            this.largeIconToolStripMenuItem.Name = "largeIconToolStripMenuItem";
-            this.largeIconToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.largeIconToolStripMenuItem.Text = "Large Icon";
-            this.largeIconToolStripMenuItem.Click += new System.EventHandler(this.largeIconToolStripMenuItem_Click);
-            // 
-            // smallIconToolStripMenuItem
-            // 
-            this.smallIconToolStripMenuItem.Name = "smallIconToolStripMenuItem";
-            this.smallIconToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.smallIconToolStripMenuItem.Text = "Small Icon";
-            this.smallIconToolStripMenuItem.Click += new System.EventHandler(this.smallIconToolStripMenuItem_Click);
-            // 
-            // detailsViewToolStripMenuItem
-            // 
-            this.detailsViewToolStripMenuItem.Name = "detailsViewToolStripMenuItem";
-            this.detailsViewToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.detailsViewToolStripMenuItem.Text = "Details View";
-            this.detailsViewToolStripMenuItem.Click += new System.EventHandler(this.detailsViewToolStripMenuItem_Click);
-            // 
-            // ImageList1
-            // 
-            this.ImageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList1.ImageStream")));
-            this.ImageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageList1.Images.SetKeyName(0, "FLGGERM.ICO");
-            this.ImageList1.Images.SetKeyName(1, "CTRCAN.ICO");
-            this.ImageList1.Images.SetKeyName(2, "CTRFRAN.ICO");
-            this.ImageList1.Images.SetKeyName(3, "CTRGERM.ICO");
-            this.ImageList1.Images.SetKeyName(4, "CTRITALY.ICO");
-            this.ImageList1.Images.SetKeyName(5, "CTRJAPAN.ICO");
-            this.ImageList1.Images.SetKeyName(6, "CTRMEX.ICO");
-            this.ImageList1.Images.SetKeyName(7, "CTRSKOR.ICO");
-            this.ImageList1.Images.SetKeyName(8, "CTRSPAIN.ICO");
-            this.ImageList1.Images.SetKeyName(9, "CTRUK.ICO");
-            this.ImageList1.Images.SetKeyName(10, "CTRUSA.ICO");
-            this.ImageList1.Images.SetKeyName(11, "FLGASTRL.ICO");
-            this.ImageList1.Images.SetKeyName(12, "FLGAUSTA.ICO");
-            this.ImageList1.Images.SetKeyName(13, "FLGBELG.ICO");
-            this.ImageList1.Images.SetKeyName(14, "FLGBRAZL.ICO");
-            this.ImageList1.Images.SetKeyName(15, "FLGCAN.ICO");
-            this.ImageList1.Images.SetKeyName(16, "FLGDEN.ICO");
-            this.ImageList1.Images.SetKeyName(17, "FLGFIN.ICO");
-            this.ImageList1.Images.SetKeyName(18, "FLGFRAN.ICO");
-            // 
-            // ImageList2
-            // 
-            this.ImageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList2.ImageStream")));
-            this.ImageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageList2.Images.SetKeyName(0, "FLGGERM.ICO");
-            this.ImageList2.Images.SetKeyName(1, "CTRCAN.ICO");
-            this.ImageList2.Images.SetKeyName(2, "CTRFRAN.ICO");
-            this.ImageList2.Images.SetKeyName(3, "CTRGERM.ICO");
-            this.ImageList2.Images.SetKeyName(4, "CTRITALY.ICO");
-            this.ImageList2.Images.SetKeyName(5, "CTRJAPAN.ICO");
-            this.ImageList2.Images.SetKeyName(6, "CTRMEX.ICO");
-            this.ImageList2.Images.SetKeyName(7, "CTRSKOR.ICO");
-            this.ImageList2.Images.SetKeyName(8, "CTRSPAIN.ICO");
-            this.ImageList2.Images.SetKeyName(9, "CTRUK.ICO");
-            this.ImageList2.Images.SetKeyName(10, "CTRUSA.ICO");
-            this.ImageList2.Images.SetKeyName(11, "FLGASTRL.ICO");
-            this.ImageList2.Images.SetKeyName(12, "FLGAUSTA.ICO");
-            this.ImageList2.Images.SetKeyName(13, "FLGBELG.ICO");
-            this.ImageList2.Images.SetKeyName(14, "FLGBRAZL.ICO");
-            this.ImageList2.Images.SetKeyName(15, "FLGCAN.ICO");
-            this.ImageList2.Images.SetKeyName(16, "FLGDEN.ICO");
-            this.ImageList2.Images.SetKeyName(17, "FLGFIN.ICO");
-            this.ImageList2.Images.SetKeyName(18, "FLGFRAN.ICO");
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FrmConnected
             // 
@@ -1346,10 +1382,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1451,5 +1487,8 @@
         private System.Windows.Forms.ToolStripMenuItem detailsViewToolStripMenuItem;
         internal System.Windows.Forms.ImageList ImageList2;
         internal System.Windows.Forms.ImageList ImageList1;
+        private WindowsFormsApp2.NWDataSetTableAdapters.MyMemberTableAdapter myMemberTableAdapter1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
