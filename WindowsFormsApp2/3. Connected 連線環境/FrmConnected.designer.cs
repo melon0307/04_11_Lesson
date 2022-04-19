@@ -270,7 +270,7 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(564, 47);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(587, 378);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(587, 386);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // button25
@@ -763,6 +763,7 @@
             this.button29.TabIndex = 1;
             this.button29.Text = "Do Transaction";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button28
             // 
@@ -773,6 +774,7 @@
             this.button28.TabIndex = 0;
             this.button28.Text = "No Transaction";
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button83
             // 

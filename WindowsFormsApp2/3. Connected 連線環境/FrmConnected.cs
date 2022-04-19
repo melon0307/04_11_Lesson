@@ -20,7 +20,7 @@ namespace Starter
             InitializeComponent();
             LoadCountryToCombox();
             CreateListViewColumns();
-            this.tabControl1.SelectedIndex = 3;
+            this.tabControl1.SelectedIndex =4;
             this.listBox4.Visible = false;
             this.pictureBox1.AllowDrop = true;
             this.pictureBox1.DragEnter += PictureBox1_DragEnter;
@@ -752,6 +752,69 @@ namespace Starter
         {
             int imageID = ((Myimage)this.listBox5.SelectedItem).myImageID;
             ShowImage(imageID);
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
+                {
+                    SqlCommand command = new SqlCommand();
+                    command.Connection = conn;
+                    conn.Open();
+
+                    command.CommandText = "Insert into Region(RegionID,RegionDescription) values(100,'aaaaaaaaaa')";
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "Insert into Region(RegionID,RegionDescription) values(101,'bbbbbbbbb')";                    
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Insert Region successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = null;
+            SqlTransaction txn = null;
+            try
+            {                
+                {
+                    conn = new SqlConnection(Settings.Default.NorthwindConnectionString);
+                    SqlCommand command = new SqlCommand();
+                    command.Connection = conn;
+                    conn.Open();
+                     txn = conn.BeginTransaction();
+                    command.Transaction = txn;
+
+                    command.CommandText = "Insert into Region(RegionID,RegionDescription) values(100,'aaaaaaaaaa')";
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "Insert into Region(RegionID,RegionDescription) values(100,'xxxxxxxxxxxx')";
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "Insert into Region(RegionID,RegionDescription) values(101,'bbbbbbbbb')";
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Insert Region successfully");
+                    txn.Commit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                txn.Rollback();
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

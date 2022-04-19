@@ -1,10 +1,12 @@
-﻿using Starter;
+﻿using Demo;
+using Starter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp2._1._OverView;
+using WindowsFormsApp2._4._Disconnected_離線_DataSet;
 
 namespace WindowsFormsApp2
 {
@@ -28,7 +30,7 @@ namespace WindowsFormsApp2
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConnected());
+            Application.Run(new FrmProductCRUD());
         }
     }
 }
