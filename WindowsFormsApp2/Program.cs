@@ -30,7 +30,7 @@ namespace WindowsFormsApp2
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProductCRUD());
+            Application.Run(new FrmDisConnected_離線DataSet());
         }
     }
 }

@@ -80,5 +80,27 @@ namespace Starter
             FrmProductCRUD f = new FrmProductCRUD();
             f.Show();
         }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            FrmRelation f = new FrmRelation();
+            f.Show();
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            this.DataGridView6.DataSource = this.nwDataSet1.Products;
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter1.Update(this.nwDataSet1.Products);
+        }
+
+        private void Button9_Click(object sender, EventArgs e)
+        {
+            this.DataGridView5.DataSource = this.nwDataSet1.Products.GetChanges(DataRowState.Added);
+            this.DataGridView3.DataSource = this.nwDataSet1.Products.GetChanges(DataRowState.Modified);
+        }
     }
 }

@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,7 +45,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -75,6 +75,8 @@
             this.TabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.ColumnDetails2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.Button25 = new System.Windows.Forms.Button();
@@ -106,8 +108,6 @@
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.TabPage4 = new System.Windows.Forms.TabPage();
             this.TabPage5 = new System.Windows.Forms.TabPage();
-            this.Column2 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.ColumnDetails2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -401,7 +401,7 @@
             this.TabPage1.Controls.Add(this.Label5);
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.TabPage1.Size = new System.Drawing.Size(880, 519);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "DataGridView";
@@ -427,7 +427,7 @@
             dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle48;
             this.dataGridView1.Location = new System.Drawing.Point(167, 87);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 31;
             this.dataGridView1.Size = new System.Drawing.Size(205, 151);
@@ -461,6 +461,23 @@
             this.dataGridView7.Size = new System.Drawing.Size(551, 151);
             this.dataGridView7.TabIndex = 88;
             this.dataGridView7.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView7_CellContentClick);
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "ProductID";
+            this.Column2.Name = "Column2";
+            this.Column2.Text = "Product Details";
+            this.Column2.UseColumnTextForLinkValue = true;
+            // 
+            // ColumnDetails2
+            // 
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.Padding = new System.Windows.Forms.Padding(2);
+            this.ColumnDetails2.DefaultCellStyle = dataGridViewCellStyle50;
+            this.ColumnDetails2.HeaderText = "詳細";
+            this.ColumnDetails2.Name = "ColumnDetails2";
+            this.ColumnDetails2.Text = "產品明細";
+            this.ColumnDetails2.UseColumnTextForButtonValue = true;
             // 
             // label6
             // 
@@ -690,6 +707,7 @@
             this.Button9.TabIndex = 20;
             this.Button9.Text = "GetChanged \r\n( DataRowState - 資料列狀態)";
             this.Button9.UseVisualStyleBackColor = true;
+            this.Button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // DataGridView6
             // 
@@ -724,6 +742,7 @@
             this.Button10.TabIndex = 18;
             this.Button10.Text = "Update -> AcceptChange";
             this.Button10.UseVisualStyleBackColor = true;
+            this.Button10.Click += new System.EventHandler(this.Button10_Click);
             // 
             // Button11
             // 
@@ -731,8 +750,9 @@
             this.Button11.Name = "Button11";
             this.Button11.Size = new System.Drawing.Size(83, 23);
             this.Button11.TabIndex = 17;
-            this.Button11.Text = "Fill";
+            this.Button11.Text = "Binding";
             this.Button11.UseVisualStyleBackColor = true;
+            this.Button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // Label12
             // 
@@ -765,6 +785,7 @@
             this.button34.TabIndex = 119;
             this.button34.Text = "FrmRelation";
             this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // TabPage3
             // 
@@ -793,7 +814,7 @@
             this.TabPage2.Controls.Add(this.Button11);
             this.TabPage2.Location = new System.Drawing.Point(4, 22);
             this.TabPage2.Name = "TabPage2";
-            this.TabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.TabPage2.Size = new System.Drawing.Size(880, 519);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "Adapater (Update)";
@@ -858,23 +879,6 @@
             this.TabPage5.TabIndex = 4;
             this.TabPage5.Text = "查閱資料表";
             this.TabPage5.UseVisualStyleBackColor = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ProductID";
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Product Details";
-            this.Column2.UseColumnTextForLinkValue = true;
-            // 
-            // ColumnDetails2
-            // 
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle50.Padding = new System.Windows.Forms.Padding(2);
-            this.ColumnDetails2.DefaultCellStyle = dataGridViewCellStyle50;
-            this.ColumnDetails2.HeaderText = "詳細";
-            this.ColumnDetails2.Name = "ColumnDetails2";
-            this.ColumnDetails2.Text = "產品明細";
-            this.ColumnDetails2.UseColumnTextForButtonValue = true;
             // 
             // dataGridView2
             // 
@@ -965,7 +969,7 @@
             this.ClientSize = new System.Drawing.Size(888, 545);
             this.Controls.Add(this.TabControl1);
             this.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDisConnected_離線DataSet";
             this.Text = "FrmDisConnected_離線DataSet";
             this.tabPage7.ResumeLayout(false);
